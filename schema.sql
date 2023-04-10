@@ -33,3 +33,12 @@ CREATE TABLE visits (
     UNIQUE (animal_id, vet_id, visit_date)
 );
 CREATE TABLE
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+ALTER TABLE
+
+ALTER TABLE visits ADD COLUMN date_of_visit TIMESTAMP;
+--To improve performance, we created an index on the vet_id column.
+CREATE INDEX visits_vet_id_idx ON visits (vet_id);
+CREATE INDEX visits_vet_id_idx ON visits (vet_id);
+CREATE INDEX owners_email_idx ON owners (email);

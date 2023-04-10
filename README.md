@@ -49,7 +49,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Vet-clinic-database <a name="about-project"></a>
 
-In this project, I added some many-to-many relationships and write more complex queries to use them to answer questions.
+In this project we got a chance to optimize some slow queries in our database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -192,6 +192,13 @@ Example:
 - Twitter: [@Ilic](https://twitter.com/MladanIlic)
 - LinkedIn: [@Ilic] (https://www.linkedin.com/in/mladanilic/)
 
+👤 **Marc Raphael**
+
+- GitHub: [@Marcraphael12](https://github.com/Marcraphael12)
+
+👤 **Suleiman**
+
+- GitHub: [@Marcraphael12](https://github.com/shaaibu7)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
