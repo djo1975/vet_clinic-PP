@@ -140,3 +140,5 @@ WHERE visits.vet_id = (SELECT id FROM vets WHERE name = 'Maisy Smith')
 GROUP BY species.name
 ORDER BY num_visits DESC
 LIMIT 1;
+
+vet_clinic=# EXPLAIN SELECT * FROM visits WHERE vet_id = 2;
