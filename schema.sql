@@ -40,4 +40,4 @@ ALTER TABLE
 ALTER TABLE visits ADD COLUMN date_of_visit TIMESTAMP;
 --To improve performance, we created an index on the vet_id column.
 CREATE INDEX visits_vet_id_idx ON visits (vet_id);
-CREATE INDEX
+CREATE INDEX visits_vet_id_idx ON visits (vet_id);
