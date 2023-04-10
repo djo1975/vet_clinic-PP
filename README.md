@@ -192,6 +192,13 @@ Example:
 - Twitter: [@Ilic](https://twitter.com/MladanIlic)
 - LinkedIn: [@Ilic] (https://www.linkedin.com/in/mladanilic/)
 
+👤 **Marc Raphael**
+
+- GitHub: [@Marcraphael12](https://github.com/Marcraphael12)
+
+👤 **Suleiman**
+
+- GitHub: [@Marcraphael12](https://github.com/shaaibu7)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
