@@ -49,7 +49,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Vet-clinic-database <a name="about-project"></a>
 
-In this project, I added some many-to-many relationships and write more complex queries to use them to answer questions.
+In this project we got a chance to optimize some slow queries in our database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
