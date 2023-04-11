@@ -6,7 +6,18 @@ CREATE TABLE medical_histories (
   FOREIGN KEY (patient_id) REFERENCES patients(id)
 );
 
+CREATE TABLE patients (
+  id SERIAL PRIMARY KEY, 
+  name VARCHAR(250) NOT NULL, 
+  date_of_birth DATE) NOT NULL;
 
+CREATE TABLE invoices(
+  id SERIAL PRIMARY KEY, 
+  total_amount DECIMAL(5, 2) NOT NULL, 
+  generated_at TIMESTAMP NOT NULL, 
+  payed_at TIMESTAMP NOT NULL, 
+  medical_history_id INT NOT NULL
+  )
 
 
 
