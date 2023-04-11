@@ -3,8 +3,13 @@ CREATE TABLE medical_histories (
   admitted_at TIMESTAMP NOT NULL,
   patient_id INTEGER NOT NULL,
   status VARCHAR(255) NOT NULL,
-  FOREIGN KEY (patient_id) REFERENCES patients(id)
 );
+
+ALTER TABLE invoices
+ADD CONSTRAINT fk_invoices_medical_histories
+FOREIGN KEY (medical_history_id)
+REFERENCES medical_histories(id);
+
 
 CREATE TABLE patients (
   id SERIAL PRIMARY KEY, 
@@ -17,6 +22,7 @@ CREATE TABLE invoices(
   generated_at TIMESTAMP NOT NULL, 
   payed_at TIMESTAMP NOT NULL, 
   medical_history_id INT NOT NULL
+  FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id)
   )
 
 create table treatments (
@@ -24,6 +30,16 @@ create table treatments (
   type VARCHAR(250) NOT NULL,
   name VARCHAR(250) NOT NULL,
 )
+
+ALTER TABLE invoice_items
+ADD CONSTRAINT fk_invoice_items_treatments
+FOREIGN KEY (treatment_id)
+REFERENCES treatments(id);
+
+ALTER TABLE invoices
+ADD CONSTRAINT fk_invoices_treatments
+FOREIGN KEY (treatment_id)
+REFERENCES treatments(id); 
 
 create table invoice_items (
   id primary key,
@@ -34,13 +50,13 @@ create table invoice_items (
   treatment_id INT NOT NULL
 )
 
-
-
-
-
-
-
-
+CREATE TABLE medical_history_treatments (
+  medical_history_id INTEGER NOT NULL,
+  treatment_id INTEGER NOT NULL,
+  PRIMARY KEY (medical_history_id, treatment_id),
+  FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
+  FOREIGN KEY (treatment_id) REFERENCES treatments(id)
+);
 
 /* Add foreign key indexes */
 CREATE INDEX patient_id_idx ON patients(id);
