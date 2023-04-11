@@ -19,6 +19,21 @@ CREATE TABLE invoices(
   medical_history_id INT NOT NULL
   )
 
+create table treatments (
+  id SERIAL PRIMARY KEY,
+  type VARCHAR(250) NOT NULL,
+  name VARCHAR(250) NOT NULL,
+)
+
+create table invoice_items (
+  id primary key,
+  unit_price DECIMAL(5, 2) NOT NULL,
+  quantity INT NOT NULL,
+  total_price DECIMAL(5, 2) NOT NULL,
+  invoice_id INT NOT NULL,
+  treatment_id INT NOT NULL
+)
+
 
 
 
